@@ -1,0 +1,490 @@
+{
+	"info": {
+		"_postman_id": "bd566c5d-9420-40f3-8d98-d89ff816dfb4",
+		"name": "Expresso",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21754115",
+		"_collection_link": "https://dark-capsule-200060.postman.co/workspace/My-Workspace~b1f28c3d-912e-4ab8-8967-19ac93236722/collection/21754115-bd566c5d-9420-40f3-8d98-d89ff816dfb4?action=share&creator=21754115&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Sign Up Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Pratham Mishra",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "pratham2@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "pratham2",
+							"type": "text"
+						},
+						{
+							"key": "regNo",
+							"value": "21BDS0133",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "confirmPassword",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "phoneNo",
+							"value": "+917045386591",
+							"type": "text"
+						},
+						{
+							"key": "profilePic",
+							"type": "file",
+							"src": "/C:/Users/Prathamesh/Downloads/Images/alex-azabache-npGyKvQ7N_w-unsplash.jpg",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BACKEND_URL}}/signup",
+					"host": [
+						"{{BACKEND_URL}}"
+					],
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"pratham2@vitstudent.com12e\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BACKEND_URL}}/login",
+					"host": [
+						"{{BACKEND_URL}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BACKEND_URL}}/users/9cf39a78-09e8-41d2-8605-779289c1c052",
+					"host": [
+						"{{BACKEND_URL}}"
+					],
+					"path": [
+						"users",
+						"9cf39a78-09e8-41d2-8605-779289c1c052"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Password Copy",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZDA3NTJmMDFjOTIyMjdiNTM2NDJjNSIsImlhdCI6MTY1NzgyOTQ2NSwiZXhwIjoxNjU3OTU5MDY1fQ.DvR6JVO8yIV1Bn8U9p1V5xzsU-iKvrO5QXPmu2mJUTc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"1234567890\",\r\n    \"newPassword\":12345678,\r\n    \"passwordConfirm\":12345678\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BACKEND_URL}}/users/updatePassword",
+					"host": [
+						"{{BACKEND_URL}}"
+					],
+					"path": [
+						"users",
+						"updatePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BACKEND_URL}}/users/62d078a1ab60f221a2cf7c90",
+					"host": [
+						"{{BACKEND_URL}}"
+					],
+					"path": [
+						"users",
+						"62d078a1ab60f221a2cf7c90"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User Copy",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phoneNo",
+							"value": "+917045386599",
+							"contentType": "",
+							"type": "text"
+						},
+						{
+							"key": "profilePic",
+							"type": "file",
+							"src": "/C:/Users/Prathamesh/Downloads/Images/diego-ph-u0I4lO0mzSE-unsplash.jpg",
+							"disabled": true
+						},
+						{
+							"key": "profilePic",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BACKEND_URL}}/users/646b68aefcd79fed209a508c",
+					"host": [
+						"{{BACKEND_URL}}"
+					],
+					"path": [
+						"users",
+						"646b68aefcd79fed209a508c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot Password Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"something@something.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/forgotPassword",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"forgotPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/testuser/resetPassword/889d6052fed0352a02a9bf63860acdd02b60ff75a35dfb393ac0fab4f5401cb0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"testuser",
+						"resetPassword",
+						"889d6052fed0352a02a9bf63860acdd02b60ff75a35dfb393ac0fab4f5401cb0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cart\": [\r\n    {\r\n      \"productName\": \"Product 5\",\r\n      \"productPrice\": 10.99\r\n    },\r\n    {\r\n      \"productName\": \"Product 2\",\r\n      \"productPrice\": 19.99\r\n    }\r\n  ],\r\n  \"instructions\": \"Handle with care\",\r\n  \"priceDetails\": {\r\n    \"basePrice\": 30.98,\r\n    \"discount\": 5.0,\r\n    \"deliveryCharges\": 3.0,\r\n    \"totalAmount\": 28.98\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BACKEND_URL}}/consumer/",
+					"host": [
+						"{{BACKEND_URL}}"
+					],
+					"path": [
+						"consumer",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cart\": [\r\n    {\r\n      \"productName\": \"Product 1\",\r\n      \"productPrice\": 10.99\r\n    },\r\n    {\r\n      \"productName\": \"Product 2\",\r\n      \"productPrice\": 19.99\r\n    }\r\n  ],\r\n  \"instructions\": \"Handle with care\",\r\n  \"priceDetails\": {\r\n    \"basePrice\": 30.98,\r\n    \"discount\": 5.0,\r\n    \"deliveryCharges\": 3.0,\r\n    \"totalAmount\": 28.98\r\n  },\r\n  \"shippingDetails\": {\r\n    \"shipper\": \"user456\"\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BACKEND_URL}}/consumer/646b73abccab4f8695141e02",
+					"host": [
+						"{{BACKEND_URL}}"
+					],
+					"path": [
+						"consumer",
+						"646b73abccab4f8695141e02"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Order",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cart\": [\r\n    {\r\n      \"productName\": \"Product 1\",\r\n      \"productPrice\": 10.99\r\n    },\r\n    {\r\n      \"productName\": \"Product 2\",\r\n      \"productPrice\": 19.99\r\n    }\r\n  ],\r\n  \"instructions\": \"Handle with care\",\r\n  \"priceDetails\": {\r\n    \"basePrice\": 30.98,\r\n    \"discount\": 5.0,\r\n    \"deliveryCharges\": 3.0,\r\n    \"totalAmount\": 28.98\r\n  },\r\n  \"shippingDetails\": {\r\n    \"shipper\": \"user456\"\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BACKEND_URL}}/consumer/646b72abdedb65313df6e68b",
+					"host": [
+						"{{BACKEND_URL}}"
+					],
+					"path": [
+						"consumer",
+						"646b72abdedb65313df6e68b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Orders",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BACKEND_URL}}/shipper/",
+					"host": [
+						"{{BACKEND_URL}}"
+					],
+					"path": [
+						"shipper",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accept Order",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BACKEND_URL}}/shipper/accept/646b73abccab4f8695141e02",
+					"host": [
+						"{{BACKEND_URL}}"
+					],
+					"path": [
+						"shipper",
+						"accept",
+						"646b73abccab4f8695141e02"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm Pick Up",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BACKEND_URL}}/shipper/pickUp/646b73abccab4f8695141e02",
+					"host": [
+						"{{BACKEND_URL}}"
+					],
+					"path": [
+						"shipper",
+						"pickUp",
+						"646b73abccab4f8695141e02"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm OTW",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BACKEND_URL}}/shipper/otw/646b73abccab4f8695141e02",
+					"host": [
+						"{{BACKEND_URL}}"
+					],
+					"path": [
+						"shipper",
+						"otw",
+						"646b73abccab4f8695141e02"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
