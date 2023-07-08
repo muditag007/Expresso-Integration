@@ -2,8 +2,8 @@
 
 import 'dart:async';
 import 'package:expresso/constants.dart';
-import 'package:expresso/pages/shipper/models/order_model.dart';
-import 'package:expresso/pages/shipper/models/product_model.dart';
+import 'package:expresso/models/order_model.dart';
+import 'package:expresso/models/product_model.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert' show json;
 
@@ -30,7 +30,7 @@ class ShipperBloc extends Bloc<ShipperEvent, ShipperState> {
         headers: {
           "Content-Type": "application/json",
           "Authorization":
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTQ0YmZmZjE4YWYzMjJhNjI4YjE4MiIsImlhdCI6MTY4ODQ4OTM1OCwiZXhwIjoxNjg4NjE4OTU4fQ.G6Th4oKgBcJ2iTeiTIrvUYRxeow5Kq_6ws8GCm4Svrk",
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTQ0YmZmZjE4YWYzMjJhNjI4YjE4MiIsImlhdCI6MTY4ODcyMTY3NywiZXhwIjoxNjg4ODUxMjc3fQ.JrkhOdJbzP-JBhAx-Gqzo8WvRF0HdpcTiwtT-oK0ECY",
         },
       );
       print(response.body);

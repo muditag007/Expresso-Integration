@@ -3,8 +3,22 @@ part of 'order_bloc.dart';
 @immutable
 abstract class OrderEvent {}
 
-class OrderAcceptEvent extends OrderEvent {}
+class OrderAcceptEvent extends OrderEvent {
+  final Orders orderDet;
 
-class OrderInitialEvent extends OrderEvent {}
+  OrderAcceptEvent({required this.orderDet});
+}
+
+class OrderInitialEvent extends OrderEvent {
+  final String orderId;
+
+  OrderInitialEvent({required this.orderId});
+}
 
 class OrderCancelEvent extends OrderEvent {}
+
+class OrderNavigateSpecificEvent extends OrderEvent {
+  final Orders orderDet;
+
+  OrderNavigateSpecificEvent({required this.orderDet});
+}
